@@ -1,0 +1,115 @@
+ <! consist of 1.html open and closd html tag, 2.head and 3.body>
+<! use for comments in html>
+<!--inside 'div' gave classname which is in '#510505body' tag, and defined class name in 'style' which is inside 'head' tag-->
+
+
+<!--div is a block elements/box and you can add pargarph inside block elements -->
+<!DOCTYPE html>
+<html>
+    
+   <head>
+       <meta charset="utf-8">  <!self enclosed tag>
+       <title> change html using variable </title>
+       
+       <style>
+      
+           .bluebox{
+/*               .bluebox classname defined*/
+               background-color: blue;
+               color: white;   
+/*             facebook text color is white*/
+               height: 100px;
+               width: auto
+               
+               
+           }
+           
+           
+           .yellowbox{
+/*               .yellowbox classname defined*/
+               background-color: green;
+               color: red;
+/*             Apple text color is white*/
+               height: 100px;
+               width: auto
+               
+               
+           }
+           
+                      .redbox{
+/*               .yellowbox classname defined*/
+               background-color: red;
+               color: white;
+/*             Apple text color is white*/
+               height: 100px;
+               width: auto
+               
+               
+           }
+           
+           
+           
+       </style>
+       
+<!--       here 'p' stands for paragraph which is inside 'style' open and close tag-->
+    
+   </head>
+    
+    
+    
+    <body>
+        
+        <div class="bluebox" id="facebook">  <!--classname with id-->
+            
+        <p>Facebook</p> <!--pargraph-->
+        
+        </div>
+<!--    div box closed-->
+        
+        <div class="yellowbox" id="apple">  <!--classname with id-->
+            
+        <p>Apple</p> 
+               
+       </div> 
+        
+<!--        div box closed-->
+        
+        <div class="redbox" id="microsoft">  <!--classname with id-->
+            
+        <p>Microsoft</p> 
+               
+       </div> 
+        
+        <button id="button1" onclick="swap('facebook','apple')">Swap content of facebook and apple </button>
+        
+<!--        swapping facebook with apple-->
+        
+        <button id="button2" onclick="swap('apple','microsoft')">Swap content of apple and microsoft </button> 
+  
+        <script>
+
+//here will use function to swap .inner html box data from facebook to apple, and microsfot to apple
+            
+            function swap(id1,id2){
+                
+                var x= document.getElementById(id1).innerHTML;
+//                inner html to change data
+                var y= document.getElementById(id2).innerHTML;
+                
+                
+                document.getElementById(id1).innerHTML =y;
+                
+                document.getElementById(id2).innerHTML =x;
+                
+            }
+            
+           
+            
+        </script>
+        
+            
+             
+    
+    </body>
+
+</html>
